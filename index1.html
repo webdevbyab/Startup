@@ -1,0 +1,87 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button with Link</title>
+    <style>
+        .button{
+            width: 200px;
+            height: 50px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="img">
+        <img src="./7.jpeg" alt="">
+    </div>
+
+    <button id="button"></button>
+
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button with Link</title>
+    <style>
+        .button {
+            width: 200px;
+            height: 50px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #img {
+            display: none;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="button" class="button">Show Image</button>
+
+    <div id="img">
+        <img src="./7.jpeg" alt="Image">
+    </div>
+
+
+    
+
+
+    <script>
+        document.getElementById("button").addEventListener("click", function() {
+            var imgElement = document.getElementById("img");
+            if (imgElement.style.display === "none") {
+                imgElement.style.display = "inline";
+                this.textContent = "Hide Image";
+            } else {
+                imgElement.style.display = "none";
+                this.textContent = "Show Image";
+            }
+        });
+    </script>
+</body>
+</html>
